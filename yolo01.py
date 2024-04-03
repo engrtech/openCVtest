@@ -9,6 +9,8 @@ cap.set(4, 480)
 
 model = YOLO("yolo-Weights/yolov8m.pt")
 
+#this comment added in pycharm in desktop
+
 classNames = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "train", "truck", "boat",
               "traffic light", "fire hydrant", "stop sign", "parking meter", "bench", "bird", "cat",
               "dog", "horse", "sheep", "cow", "elephant", "bear", "zebra", "giraffe", "backpack", "umbrella",

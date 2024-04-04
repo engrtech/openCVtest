@@ -33,6 +33,7 @@ while True:
             # bounding box
             x1, y1, x2, y2 = box.xyxy[0]
             x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)  # convert to int values
+            print(str(x1+x2/2), str(y1+y2/2))
 
             # put box in cam
             cv2.rectangle(img, (x1, y1), (x2, y2), (255, 0, 255), 3)
@@ -52,7 +53,7 @@ while True:
             color = (255, 0, 0)
             thickness = 2
 
-            cv2.putText(img, classNames[cls], org, font, fontScale, color, thickness)
+            cv2.putText(img, (classNames[cls]+str(x1+x2/2)+str(y1+y2/2)), org, font, fontScale, color, thickness)
 
     cv2.imshow('Webcam', img)
 
